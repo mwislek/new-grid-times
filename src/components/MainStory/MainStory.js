@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/macro';
+import { QUERIES } from '../../constants';
 
 const MainStory = ({
   id,
@@ -18,7 +19,7 @@ const MainStory = ({
       <Abstract>
         <Location>{location}</Location> — {abstract}
       </Abstract>
-      <ReadMore href="/story">Continue Reading…</ReadMore>
+      <ReadMore href="/story">Continue Reading</ReadMore>
     </Wrapper>
   );
 };
@@ -41,9 +42,21 @@ const Heading = styled.h2`
 `;
 
 const Abstract = styled.p`
+  display: -webkit-box;
+	-webkit-line-clamp: 8;
+	-webkit-box-orient: vertical;
   font-size: 1rem;
   margin-bottom: 1em;
+	overflow: hidden;
   white-space: pre-wrap;
+
+  @media ${QUERIES.tabletAndUp} {
+    -webkit-line-clamp: 16;
+  }
+
+  @media ${QUERIES.laptopAndUp} {
+    -webkit-line-clamp: 8;
+  }
 `;
 
 const Location = styled.span`
