@@ -49,6 +49,7 @@ const Abstract = styled.p`
   font-size: 1rem;
   overflow: hidden;
   white-space: pre-wrap;
+  align-self: start;
 `;
 
 export default SecondaryStory;

@@ -17,17 +17,7 @@ const OpinionStory = ({ id, title, author, avatar }) => {
 };
 
 const Wrapper = styled.article`
-  display: flex;
-  align-items: flex-start;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  gap: 16px;
-
   color: var(--color-gray-900);
-
-  @media ${QUERIES.tabletOnly} {
-    display: revert;
-  }
 `;
 
 const Avatar = styled.img`
@@ -36,6 +26,13 @@ const Avatar = styled.img`
   height: 48px;
   border-radius: 50%;
   object-fit: cover;
+  float: right;
+  margin-left: 16px;
+
+  @media ${QUERIES.tabletOnly} {
+    float: revert;
+    margin-left: revert;
+  }
 `;
 
 const AuthorName = styled.p`
