@@ -105,14 +105,17 @@ const OpinionStoryList = styled.div`
   flex-direction: column;
 
   @media ${QUERIES.tabletOnly} {
-    display: grid;
-    gap: 0 16px;
-    grid-template-columns: repeat(auto-fit, 172px);
+    flex-direction: row;
+    gap: 16px;
   }
 `;
 
 const OpinionSection = styled.section`
   grid-area: opinion-stories;
+
+  @media ${QUERIES.laptopAndUp} {
+    margin-top: -8px;
+  }
 `;
 
 const SecondaryStoryContainer = styled.div`
@@ -140,6 +143,7 @@ const OpinionStoryContainer = styled.div`
     border-bottom: none;
     margin-bottom: 0;
     padding-bottom: 0;
+    flex: 1;
   }
 `;
 
